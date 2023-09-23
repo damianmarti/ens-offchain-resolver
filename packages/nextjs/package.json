@@ -21,6 +21,7 @@
     "@rainbow-me/rainbowkit": "1.0.8",
     "@uniswap/sdk-core": "^4.0.1",
     "@uniswap/v2-sdk": "^3.0.1",
+    "@vercel/kv": "^0.2.3",
     "blo": "^1.0.1",
     "daisyui": "^3.5.1",
     "ethers": "^5.7.2",

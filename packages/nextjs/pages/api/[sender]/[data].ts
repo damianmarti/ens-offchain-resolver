@@ -2,10 +2,11 @@ import { abi as Resolver_abi } from "@ensdomains/ens-contracts/artifacts/contrac
 import { abi as IResolverService_abi } from "@ensdomains/offchain-resolver-contracts/artifacts/contracts/OffchainResolver.sol/IResolverService.json";
 import { Fragment, Interface, JsonFragment } from "@ethersproject/abi";
 import { hexlify } from "@ethersproject/bytes";
+import { kv } from "@vercel/kv";
 import { BytesLike, ethers } from "ethers";
 import { Result, hexConcat } from "ethers/lib/utils";
 import { NextApiRequest, NextApiResponse } from "next";
-import { JSONDatabase } from "~~/utils/json";
+import { ENSRedisDatabase } from "~~/utils/ensRedis";
 
 const Resolver = new ethers.utils.Interface(Resolver_abi);
 const ETH_COIN_TYPE = 60;
@@ -120,7 +121,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const encodedData = args[1];
 
-  const db = JSONDatabase.fromFilename("test.eth.json", 300);
+  const db = new ENSRedisDatabase(300);
   const { result, validUntil } = await query(db, name, encodedData);
   console.log("result", result);
 
