@@ -1,4 +1,14 @@
-# 🏗 Scaffold-ETH 2
+# ENS Off-Chain Resolver Gateway implemented with Next.js and Redis DB
+
+https://github.com/ensdomains/offchain-resolver implements an ENS off-chain resolver using a Cloudflare gateway and saving the data to a JSON file.
+
+This project improves that implementation using Scaffold-ETH 2 to serve as an off-chain resolver, using Next.js, and saving the data to a Redis DB.
+
+Deployed to https://ens-offchain-resolver.vercel.app/
+
+Contracts deployed and verified: https://etherscan.io/address/0xd4b3fc529e71093f4ffb23a8a84da247dd1a8fe2
+
+## Built with 🏗 Scaffold-ETH 2
 
 <h4 align="center">
   <a href="https://docs.scaffoldeth.io">Documentation</a> |
