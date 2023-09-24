@@ -8,6 +8,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     await kv.hset("ens:test.eth", testJson["test.eth"]);
     await kv.hset("ens:*.test.eth", testJson["*.test.eth"]);
+    await kv.hset("ens:damu.test.damianmarti.eth", testJson["damu.test.damianmarti.eth"]);
+    await kv.hset("ens:test.damianmarti.eth", testJson["ens.test.damianmarti.eth"]);
 
     res.status(200).json(testJson);
   }
