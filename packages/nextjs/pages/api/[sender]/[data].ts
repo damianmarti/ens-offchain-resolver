@@ -136,7 +136,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const privateKey = "0xc99d1fec66736e414a9a0e5b9771bc12eb0214552944dda994a8e5dfece9cdf1";
   const signer = new ethers.utils.SigningKey(privateKey);
   const sig = signer.signDigest(messageHash);
-  const sigData = hexConcat([sig.r, sig._vs]);
+  const sigData = hexConcat([sig.r, sig.s, new Uint8Array([sig.v])])
   console.log("validUntil", validUntil);
   console.log("sigData", sigData);
 
