@@ -131,7 +131,7 @@ const Home: NextPage = () => {
           </h1>
           <div className="flex flex-col bg-base-300 px-2 py-2 text-center items-center w-96 rounded-3xl text-2xl opacity-95">
             <p className="text-center text-lg">
-              Claim <span className="font-bold italic">your-alias-loogies.eth</span> ENS
+              Claim <span className="font-bold italic">your-alias.loogies.eth</span> ENS
             </p>
             <p className="text-center text-lg mt-0">
               Free and no gas fee required!
